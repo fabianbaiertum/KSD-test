@@ -6,7 +6,7 @@ For the alternative hypothesis, we compared it to two Maximum Mean Discrepancy b
 while the other was proposed by Brueck, Ferminan and Min (BFM) in their paper ... link. The BFM test is available in R, written by Florian Brueck (https://github.com/florianbrueck/MMD_tests_for_model_selection/blob/main/BFM-TEST.R) and was later implemented in Python using GPU by Fabian Baier (https://github.com/fabianbaiertum/BFM-test).
 
 Our KSD test is implemented using JAX, to make use of GPU, as those tests would be infeasible to run on CPU. 
-For the estimation of the different theta's and the wildbootstrap based MMD and KSD tests, we are using the code of Key et. al link ... 
+For the estimation of the different theta's and the wildbootstrap based MMD and KSD tests, we are using the code of Key et. al github link ... 
 
 
 ## Plot specifics under null hypothesis (runs=500, B=200)
