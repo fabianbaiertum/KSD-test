@@ -5,7 +5,7 @@ We also did a simukation study, comparing the test to the Wildbootstrap KSD-base
 For the alternative hypothesis, we compared it to two Maximum Mean Discrepancy based tests, one also proposed by Key et. al (link), 
 while the other was proposed by Brueck, Ferminan and Min (BFM) in their paper ... link. The BFM test is available in R, written by Florian Brueck (  ) and was later implemented in Python using GPU by Fabian Baier (https://github.com/fabianbaiertum/BFM-test).
 
-Our KSD test is implemented using JAX, to make use of GPU, as those tests would be infeasible to run on CPU.
+Our KSD test is implemented using JAX, to make use of GPU, as those tests would be infeasible to run on CPU. 
 
 
 ## Plot specifics under null hypothesis (runs=500, B=200)
