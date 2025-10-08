@@ -2,6 +2,7 @@
 
 
 ## Plot specifics under null hypothesis (runs=500, B=200)
+l=d
 
 d=1 sigma = 4.0
 
