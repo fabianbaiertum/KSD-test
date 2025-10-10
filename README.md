@@ -10,7 +10,7 @@ For the estimation of the different theta's and the wildbootstrap based MMD and 
 
 
 ## Plot specifics under null hypothesis (runs=500, B=200)
-l=d
+l= sqrt(d) * 0.2
 
 d=1 sigma = 4.0
 
