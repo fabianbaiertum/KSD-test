@@ -12,7 +12,7 @@ For the estimation of the different theta's and the wildbootstrap based MMD and 
 
 We use the Gaussian kernel k(x,y)= exp(- (x-y)^2/ 2* l^2) with bandwidth l.
 ## Plot specifics under null hypothesis 
-We calibrated our model to l= sqrt(d) * 0.2, so c=0.2 was close to optimal, found via grid search on additional data.
+We calibrated our model to the bandwidth l= sqrt(d) * 0.2, so c=0.2 was close to optimal, found via grid search on additional data.
 The tests are under the null that the sample comes from a multivariate Gaussian distribution and we compare the wild bootstrap test of Key et al with our test. 
 
 
