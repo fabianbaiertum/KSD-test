@@ -1,11 +1,11 @@
 # ============================================================
-# Optimized KSD / MMD power study (no wild bootstrap anywhere)
+# Optimized KSD / MMD power study 
 # - Fast RBF KSD core (no per-pair AD) for H and U/V stats
 # - Pre-indexed composite bootstrap for ~KSD (U-stat + centering + grad correction)
 # - Robust JAX<->CuPy transfer: zero-copy when possible, safe fallback otherwise
 # - Parametric bootstrap batching knob
-# - KSD: use U-stat for YOUR ~KSD test; use V-stat for the parametric KSD
-# - RBF kernel choice: GaussianKernel(l = sqrt(d))
+# - KSD: use U-stat for our ~KSD test; use V-stat for the parametric KSD
+# - RBF kernel choice: GaussianKernel(l = sqrt(d)*c)
 # - GMM alternative: two components with means ±μ in **all** coordinates
 # ============================================================
 
@@ -1173,3 +1173,4 @@ if __name__ == "__main__":
     )
     print("\nSummary head:")
     print(df_power.head())
+
