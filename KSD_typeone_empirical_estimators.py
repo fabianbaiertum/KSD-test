@@ -785,15 +785,6 @@ def centered_core_matrix_for_theta(kernel: Kernel, score: ScoreFunc, theta: Arra
 # 3) Composite ˜KSD bootstrap (U-statistic)
 #    X = original sample; X_bootstrap = X[idx]
 # ============================================================
-
-
-
-
-# ============================================================
-# 3) Composite ˜KSD bootstrap (U-statistic)
-#    X = original sample; X_bootstrap = X[idx]
-# ============================================================
-
 def KSD_test(
     kernel: Kernel,
     score: ScoreFunc,
@@ -1253,7 +1244,7 @@ def mvn_full_family_chol(d: int):
 # Kernel helper (your form):  k(x,y) = exp(-||x-y||^2 / l),  l = d
 # ===========================
 def make_kernel_for_dim(d: int) -> GaussianKernel:
-    return GaussianKernel(l=float(np.sqrt(d)*0.2))    #TODO  simulate with l=sqrt(d)    not l=d, test sqrt(d)*1, *2, *3, *0.5, *1 doesn't work,*0.5 doesn't work, 2
+    return GaussianKernel(l=float(np.sqrt(d)*0.2))    #TODO  simulate with l=sqrt(d)*c
 
 
 # ===========================
@@ -1338,6 +1329,7 @@ plot_type1_vs_n_both_mvn(
     scale_by_d=scale_map,
     save=False,
 )
+
 
 
 
