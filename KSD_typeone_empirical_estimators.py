@@ -170,7 +170,7 @@ class GaussianKernel(Kernel):
     l: float
 
     def __call__(self, x1: Array, x2: Array) -> Scalar:
-        return jnp.exp(-((x1 - x2) ** 2).sum() / (2* self.l**2))   #TODO previously jnp.exp(-((x1 - x2) ** 2).sum() / (2 * self.l**2))
+        return jnp.exp(-((x1 - x2) ** 2).sum() / (2*self.l**2))   #TODO previously jnp.exp(-((x1 - x2) ** 2).sum() / (2 * self.l**2))
 
 
 @dataclass(frozen=True, eq=True)
@@ -1253,7 +1253,7 @@ def mvn_full_family_chol(d: int):
 # Kernel helper (your form):  k(x,y) = exp(-||x-y||^2 / l),  l = d
 # ===========================
 def make_kernel_for_dim(d: int) -> GaussianKernel:
-    return GaussianKernel(l=float(d))
+    return GaussianKernel(l=float(np.sqrt(d)*0.2))    #TODO  simulate with l=sqrt(d)    not l=d, test sqrt(d)*1, *2, *3, *0.5, *1 doesn't work,*0.5 doesn't work, 2
 
 
 # ===========================
@@ -1326,11 +1326,11 @@ def plot_type1_vs_n_both_mvn(
         plt.legend()
         plt.show()
 
-# ===== example usage: per-dimension σ map with ℓ = d =====
-scale_map = {10: 8.0, 20: 200.0}
+# ===== example usage: per-dimension σ map with ℓ = sqrt(d)*0.5 =====
+scale_map = {1:1.0, 2: 1.0, 4: 1.0}
 plot_type1_vs_n_both_mvn(
-    d_list=(10, 20),
-    n_values=(200, 400, 600, 800),
+    d_list=(1, 2, 4),
+    n_values=(200,300, 400, 500, 600),
     B=200,
     runs=500,
     level=0.05,
@@ -1339,5 +1339,5 @@ plot_type1_vs_n_both_mvn(
     save=False,
 )
 
-# sigma= 6.0    600 0.04   800 0.028
-# sigma = 12.0   200 0.02  400 0.024  600  0.044  800 0.032
+
+
