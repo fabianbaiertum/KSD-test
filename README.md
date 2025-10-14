@@ -33,7 +33,7 @@ The plot shows the power of using a symmetric Gaussian Mixture Model with mean m
 
 
 ## Further code/runtime improvements
-As this test will most likely be used for large n and dimensions d, probabilistic techniques or approximations should be used. Also, GPU memory management could be improved when using multiple H100 graphic cards. Also, the optimal bandwidth parameter is sensitive to the variance of the sample data.
+As this test will most likely be used for large sample sizes n and dimensions d, probabilistic techniques or approximations should be used. Also, GPU memory management could be improved when using multiple H100 graphic cards. Also, the optimal bandwidth parameter is sensitive to the variance of the sample data.
 
 
 
