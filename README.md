@@ -1,6 +1,6 @@
 # KSD-test
 The code file KSD_test.py implements our proposed composite goodness of fit test, which is based on Kernel Stein Discrepancy(KSD).
-It follows the algorithm 1 in our paper:  [URL ...](https://arxiv.org/pdf/2510.22792)
+It follows the algorithm 1 in our paper:  https://arxiv.org/pdf/2510.22792
 We also did a simukation study, comparing the test to the Wildbootstrap KSD-based test by Key et. al. 
 For the alternative hypothesis, we compared it to two Maximum Mean Discrepancy based tests, one also proposed by Key et. al see https://jmlr.org/papers/volume26/24-0276/24-0276.pdf, 
 while the other was proposed by Brueck, Ferminan and Min (BFM) in their paper https://www.jmlr.org/papers/volume26/23-1199/23-1199.pdf. The BFM test is available in R, written by Florian Brueck (https://github.com/florianbrueck/MMD_tests_for_model_selection/blob/main/BFM-TEST.R) and was later implemented in Python using GPU by Fabian Baier (https://github.com/fabianbaiertum/BFM-test).
